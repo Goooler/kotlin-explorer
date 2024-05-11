@@ -33,3 +33,4 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 [plugins]
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+spotless = "com.diffplug.spotless:6.25.0"

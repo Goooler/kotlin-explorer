@@ -5,6 +5,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.spotless)
 }
 
 repositories {
@@ -78,5 +79,15 @@ compose.desktop {
                 bundleID = "dev.romainguy.kotlin.explorer"
             }
         }
+    }
+}
+
+spotless {
+    kotlin {
+        ktlint()
+        target("**/src/**/*.kt")
+    }
+    kotlinGradle {
+        ktlint()
     }
 }
